@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;500;600;700&family=WindSong:wght@500&display=swap");
+:root {
+  --primary: #fdb933;
+  --forsythia: #f2ece3;
+  --white: #fff;
+  --black: #333;
+  --grey1: #3a3b3c;
+  --grey2: #828282;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Gothic A1", sans-serif;
+  font-size: 1.6rem;
+  background-color: var(--forsythia);
+  color: var(--black);
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: var(--black);
+  color: var(--white);
+  height: 6.5rem;
+  line-height: 6.5rem;
+}
+
+nav .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.wrapper .logo a {
+  color: var(--primary);
+  font-family: "WindSong", cursive;
+  font-size: 2.7rem;
+  padding: 0.5rem;
+  font-weight: 900;
+}
+
+.wrapper .nav-list {
+  display: inline-flex;
+}
+
+.nav-list li i {
+  color: var(--grey2);
+}
+
+.nav-list a {
+  color: var(--white);
+  font-size: 1.5rem;
+  padding: 0.9rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 300ms ease;
+}
+
+.nav-list li a:hover {
+  color: var(--primary);
+}
+
+.nav-list .icon span {
+  display: inline-block;
+  margin: 0.5rem 1rem 0 0;
+  position: relative;
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list .icon .count {
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: -0.8rem;
+  height: 2rem;
+  padding: 0.5rem;
+  background-color: var(--primary);
+  font-weight: 700;
+  border-radius: 50%;
+  color: var(--black);
+}
