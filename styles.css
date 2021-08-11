@@ -51,6 +51,18 @@ li {
   margin: 0 auto;
 }
 
+@media only screen and (max-width: 1200px) {
+  .container {
+    padding: 0 3rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    max-width: 60rem;
+  }
+}
+
 nav {
   position: fixed;
   top: 0;
@@ -98,30 +110,6 @@ nav .wrapper {
   color: var(--primary);
 }
 
-.nav-list .icon span {
-  display: inline-block;
-  margin: 0.5rem 1rem 0 0;
-  position: relative;
-}
-
-.d-flex {
-  display: flex;
-  align-items: center;
-}
-
-.nav-list .icon .count {
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  right: -0.8rem;
-  height: 2rem;
-  padding: 0.5rem;
-  background-color: var(--primary);
-  font-weight: 700;
-  border-radius: 50%;
-  color: var(--black);
-}
-
 .nav-list .drop-menu1,
 .nav-list .drop-menu2 {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
@@ -141,6 +129,7 @@ nav .wrapper {
   font-size: 1.5rem;
   width: 100%;
   padding: 0 0 0 1.5rem;
+  border-radius: 0;
 }
 
 .nav-list .drop-menu1 li a:hover,
@@ -209,4 +198,160 @@ nav .wrapper {
 
 .content .row li a:hover {
   color: var(--primary);
+}
+
+.nav-list .mobile-item {
+  display: none;
+}
+
+.nav-list input {
+  display: none;
+}
+
+.wrapper .btn {
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+
+.nav-list .icon span {
+  display: inline-block;
+  margin: 0.5rem 1rem 0 0;
+  position: relative;
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list .icon .count {
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: -0.8rem;
+  height: 2rem;
+  padding: 0.5rem;
+  background-color: var(--primary);
+  font-weight: 700;
+  border-radius: 50%;
+  color: var(--black);
+}
+
+/*
+=================================
+Navigation media query
+=================================
+*/
+@media only screen and (max-width: 968px) {
+  .wrapper .nav-list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    max-width: 35rem;
+    background-color: var(--black);
+    display: block;
+    overflow-y: auto;
+    line-height: 5rem;
+    box-shadow: 0 1.5rem 1.5rem rgba(0, 0, 0, 0.1);
+    transition: all 300ms linear;
+  }
+  .nav-list li {
+    margin: 1.5rem 1rem;
+  }
+  .nav-list a {
+    display: block;
+    font-size: 1.65rem;
+    padding: 0 2rem;
+    color: var(--white);
+  }
+  .nav-list .drop-menu1,
+  .nav-list .drop-menu2 {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    top: 6.5rem;
+    padding-left: 2rem;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+  }
+  #showdrop1:checked ~ .drop-menu1,
+  #showdrop2:checked ~ .drop-menu2,
+  #showMega:checked ~ .mega-box {
+    max-height: 100%;
+  }
+  .nav-list .drop-menu1 li,
+  .nav-list .drop-menu2 li {
+    margin: 0;
+  }
+  .nav-list .drop-menu1 li a,
+  .nav-list .drop-menu2 li a {
+    font-size: 1.5rem;
+  }
+  .nav-list .desktop-item {
+    display: none;
+  }
+  .nav-list .mobile-item {
+    display: block;
+    padding-left: 2rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: all 300ms ease;
+  }
+  .nav-list .mobile-item:hover {
+    color: var(--primary);
+  }
+  .mega-box {
+    position: static;
+    top: 6.5rem;
+    padding: 0 2rem;
+    opacity: 1;
+    visibility: visible;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 300ms ease;
+  }
+  .mega-box .content {
+    flex-direction: column;
+    padding: 2rem 2rem 0 2rem;
+  }
+  .mega-box .content .row {
+    width: 100%;
+    border-top: 1px solid rgba(250, 249, 249, 0.09);
+    margin-bottom: 1.5rem;
+  }
+  .content .row:nth-child(1),
+  .content .row:nth-child(2) {
+    border-top: 0;
+  }
+  .content .row .mega-links {
+    border-left: 0;
+    padding-left: 2rem;
+  }
+  .row .mega-links li {
+    margin: 0;
+  }
+  .wrapper .btn {
+    display: block;
+    color: var(--white);
+  }
+  .nav-list .top {
+    position: relative;
+    display: block;
+    background-color: var(--primary);
+    width: 100%;
+    height: 8rem;
+  }
+  .nav-list .close-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 2.5rem;
+    color: var(--black);
+  }
+  .nav-list .icon {
+    padding-left: 2rem;
+  }
 }
