@@ -358,3 +358,114 @@ Navigation media query
     padding-left: 2rem;
   }
 }
+/*
+============================
+Hero
+============================
+*/
+.hero {
+  height: calc(100vh - 6.5rem);
+  background-color: var(--primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero .right {
+  position: absolute;
+  right: -7%;
+  bottom: -1%;
+}
+
+.hero .right img {
+  max-width: 80rem;
+  width: 100%;
+  height: 60rem;
+}
+
+.hero .left {
+  color: var(--white);
+  position: absolute;
+  left: 7%;
+  top: 40%;
+}
+
+.hero .left span {
+  display: inline-block;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.hero .left h1 {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  font-weight: 900;
+}
+
+.hero .left small {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--black);
+  font-weight: 900;
+}
+
+.hero .left a {
+  display: inline-block;
+  font-weight: 700;
+  background-color: var(--black);
+  color: var(--primary);
+
+  padding: 0.7rem 1.5rem;
+  margin-top: 1rem;
+  transition: all 300ms ease-out;
+}
+
+.hero .left a:hover {
+  color: var(--primary);
+  background-color: var(--white);
+}
+
+@media only screen and (max-width: 1200px) {
+  .hero .right img {
+    height: 50rem;
+  }
+  .hero .left span {
+    font-size: 1.7rem;
+  }
+  .hero .left h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media only screen and (max-width: 996px) {
+  .hero .left {
+    top: 30%;
+  }
+  .hero .right img {
+    height: 35rem;
+  }
+  .hero .right {
+    right: -10%;
+  }
+}
+
+@media only screen and (max-width: 567px) {
+  .hero .left {
+    top: 25%;
+  }
+  .hero .right img {
+    height: 30rem;
+  }
+  .hero .right {
+    right: -18%;
+  }
+  .hero .left span {
+    font-size: 1.6rem;
+  }
+  .hero .left h1 {
+    font-size: 3rem;
+  }
+}
